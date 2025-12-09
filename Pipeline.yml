@@ -1,0 +1,12 @@
+name: Node CI/CD
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-node:
+    runs-on: ubunuto-latest
+    steps:
+        - uses: actions/chechout@v3
+
+        - name: 

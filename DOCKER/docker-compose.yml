@@ -1,0 +1,9 @@
+services:
+  app-node:
+    container_name: app-node-calcolatrice 
+    restart: always 
+    build: 
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports: 
+      - "80:3000"
