@@ -1,12 +1,21 @@
-name: Node CI/CD
+name: pipeline di build nodejs
 on:
   push:
-    branches: [main]
+    branches: ["develop"]
 
 jobs:
-  build-node:
+  test:
     runs-on: ubunuto-latest
     steps:
-        - uses: actions/chechout@v3
+       - uses: actions/checkout@v4
 
-        - name: 
+       - name: testing
+         run: npm run test
+    
+  build:
+    runs-on: ubuntu-latest
+    steps:
+       - uses: actions/checkout@v4
+
+       - name: building
+         run: npm run build
