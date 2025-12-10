@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"deploying..\": && exit 0",
+    "test": "echo \"deploying..\": && jest",
     "build": "echo \"building..\": && exit 0"
   },
   "devDependencies": {
